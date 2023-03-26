@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - IB Outlets
     @IBOutlet var screenColor: UIView!
       
     @IBOutlet var redLabel: UILabel!
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    
+   // MARK: - View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         setUpBlueSlider()
     }
 
-    
+    //   MARK: - IB Actions
       @IBAction func actionRedSlider() {
           redLabel.text = String(format: "%.2f", redSlider.value)
           changingViewColor()
@@ -45,7 +46,8 @@ class ViewController: UIViewController {
           changingViewColor()
       }
     
-    
+   
+    // MARK: Private Methods
     private func changingViewColor() {
         let redValue = CGFloat(redSlider.value)
         let greenValue = CGFloat(greenSlider.value)
@@ -57,8 +59,7 @@ class ViewController: UIViewController {
             alpha: 1
         )
     }
-    
-  
+      
     private func setUpRedSlider() {
         redSlider.value = 0
         redSlider.minimumValue = 0
