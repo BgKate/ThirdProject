@@ -31,17 +31,17 @@ class ViewController: UIViewController {
 
     
       @IBAction func actionRedSlider() {
-          redLabel.text = redSlider.value.formatted()
+          redLabel.text = String(format: "%.2f", redSlider.value)
           changingViewColor()
       }
       
       @IBAction func actionGreenslider() {
-          greenLabel.text = greenSlider.value.formatted()
+          greenLabel.text = String(format: "%.2f", greenSlider.value)
           changingViewColor()
       }
       
       @IBAction func actionBlueSlider() {
-          blueLabel.text = blueSlider.value.formatted()
+          blueLabel.text = String(format: "%.2f", blueSlider.value)
           changingViewColor()
       }
     
